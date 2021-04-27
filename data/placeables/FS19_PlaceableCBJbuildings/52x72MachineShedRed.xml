@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>
+            <en>52x72 Red Shed</en>
+        </name>
+        <functions>
+            <function>$l10n_function_decoration</function>
+        </functions>
+        <image>placeables/FS19_PlaceableCBJbuildings/store_red.dds</image>
+        <price>25000</price>
+        <dailyUpkeep>60</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <species>placeable</species>
+        <category>sheds</category>
+        <vertexBufferMemoryUsage>942016</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>171438</indexBufferMemoryUsage>
+        <textureMemoryUsage>2611392</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+    <placeableType>placeable</placeableType>
+    <filename>placeables/FS19_PlaceableCBJbuildings/52x72MachineShedRed.i3d</filename>
+    <placement testSizeX="30" testSizeZ="30" sizeX="30" sizeZ="30" useRandomYRotation="false" useManualYRotation="true"/>
+    <clearAreas>
+        <clearArea startNode="0|0" widthNode="0|0|0" heightNode="0|0|1"/>
+    </clearAreas>
+    <leveling requireLeveling="true" maxSmoothDistance="8" maxSlope="30" maxEdgeAngle="20">
+        <levelAreas>
+            <levelArea startNode="0|0" widthNode="0|0|0" heightNode="0|0|1" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+    <tipOcclusionUpdateArea sizeX="30" sizeZ="30"/>
+	<dayNightObjects>
+        <dayNightObject node="1|11|1|0" visibleDay="false" visibleNight="true" />
+		<dayNightObject node="1|11|2|0" visibleDay="false" visibleNight="true" />
+		<dayNightObject node="1|11|3|0" visibleDay="false" visibleNight="true" />
+		<dayNightObject node="1|11|4|0" visibleDay="false" visibleNight="true" />
+    </dayNightObjects>
+     <animatedObjects>
+        <animatedObject saveId="shopdoor4" >
+            <animation duration="1">
+                <part node="1|9|1">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 120 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="1|9|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate"/>
+			<sounds>
+				<moving file="sounds/slidingDoor.ogg" loops="0" linkNode="1|9|0" volume="1.0" radius="25" innerRadius="3" fadeOut="0.25"/>
+			</sounds>
+
+        </animatedObject>
+        <animatedObject saveId="garagedoor6" >
+            <animation duration="7.5">      				
+				<part node="1|7|1">
+                    <Keyframe time="0.00" translation="0 0.018 -1.957" />
+                    <Keyframe time="1.00" translation="0 0.018 -5.568" />
+                </part>			
+			    <part node="1|7|2">
+                     <Keyframe time="0.53" translation="0 0.018 1.957" />
+                     <Keyframe time="1.00" translation="0 0.018 5.568" />
+                </part>
+            </animation>
+            <controls triggerNode="1|7|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate"/>
+			<sounds>
+				<moving file="sounds/slidingDoor.ogg" loops="0" linkNode="1|7|0" volume="1.0" radius="25" innerRadius="3" fadeOut="0.25"/>
+			</sounds>
+
+        </animatedObject>
+        <animatedObject saveId="garagedoor5" >
+            <animation duration="7.5">
+                <part node="1|8|1">
+                    <Keyframe time="0.00" translation="0 0 1.58" />
+                    <Keyframe time="1.00" translation="0 0 4.69" />
+                </part>			
+			    <part node="1|8|2">
+                     <Keyframe time="0.53" translation="0 0 -1.58" />
+                     <Keyframe time="1.00" translation="0 0 -4.69" />
+                </part>
+            </animation>
+            <controls triggerNode="1|8|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate"/>
+			<sounds>
+				<moving file="sounds/slidingDoor.ogg" loops="0" linkNode="1|8|0" volume="1.0" radius="25" innerRadius="3" fadeOut="0.25"/>
+			</sounds>
+
+        </animatedObject>
+		<animatedObject saveId="garagedoor4" >
+            <animation duration="7.5">
+                <part node="1|10|1">
+                    <Keyframe time="0.00" translation="0 -0.658 -0.095" />
+                    <Keyframe time="1.00" translation="0 -0.658 3.098" />
+                </part>			
+            </animation>
+            <controls triggerNode="1|10|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate"/>
+			<sounds>
+				<moving file="sounds/slidingDoor.ogg" loops="0" linkNode="1|10|0" volume="1.0" radius="25" innerRadius="3" fadeOut="0.25"/>
+			</sounds>
+ 
+ </animatedObject>
+    </animatedObjects>
+</placeable>

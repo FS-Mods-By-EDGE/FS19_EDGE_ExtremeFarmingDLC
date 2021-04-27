@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="14" filename="$data/shaders/lightBeamShader.xml"/>
+    <File fileId="9" filename="textures/Beleuchtung_diffuse.dds"/>
+    <File fileId="4" filename="textures/NailPlates.dds"/>
+    <File fileId="7" filename="textures/SkyLightTinRoof.dds"/>
+    <File fileId="6" filename="textures/TrimWhite.dds"/>
+    <File fileId="5" filename="textures/WhiteTinRoof.dds"/>
+    <File fileId="3" filename="textures/clearPine.dds"/>
+    <File fileId="11" filename="textures/grey100.dds"/>
+    <File fileId="12" filename="textures/lichter_difuse1.dds"/>
+    <File fileId="1" filename="textures/redSteel.dds"/>
+    <File fileId="17" filename="textures/switchcoverCF.dds"/>
+    <File fileId="10" filename="textures/white.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="01 - Default" materialId="8">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="01 - Default" materialId="15" specularColor="0.2 1 1">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="01 - Default" materialId="10" specularColor="0.2 1 1">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="01 - Default" materialId="18" alphaBlending="true">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="01 - Default" materialId="7" specularColor="0.2 1 1">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="01 - Default" materialId="9" specularColor="0.2 1 1">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="Beleuchtung" materialId="5">
+    </Material>
+    <Material name="cones" materialId="4" alphaBlending="true">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="LampeEmissive" materialId="12" diffuseColor="0.8 0.8 0.8 1" specularColor="1 1 1">
+    </Material>
+    <Material name="LampeHole" materialId="11">
+      <Texture fileId="12"/>
+    </Material>
+    <Material name="lightBeam_mat" materialId="17" emissiveColor="1 1 1 1" alphaBlending="true" customShaderId="14">
+      <CustomParameter name="UVScaleSpeed" value="1 2 0.005 -0.001"/>
+      <CustomParameter name="colorScale" value="1 1 1 1"/>
+    </Material>
+    <Material name="Material.002" materialId="14" emissiveColor="0.8 0.8 0.8 1" specularColor="1 1 1">
+    </Material>
+    <Material name="switchcover" materialId="13">
+      <Texture fileId="17"/>
+    </Material>
+    <Material name="triggers_mat" materialId="6" diffuseColor="1 0.266667 0 1">
+    </Material>
+    <Material name="white" materialId="16">
+      <Texture fileId="10"/>
+      <Glossmap fileId="11"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="72x150shedRed.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="72x150_Building" nodeId="39">
+      <TransformGroup name="areaDefinitions" nodeId="40">
+        <TransformGroup name="start" translation="-12 0 -26" nodeId="41">
+          <TransformGroup name="width" translation="26 0 0" nodeId="42"/>
+          <TransformGroup name="height" translation="0 0 52" nodeId="43"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="shed" translation="0 4.3 0" nodeId="44">
+        <Shape shapeId="1" name="OuterWalls" rotation="90 0 0" static="true" nodeId="45" materialIds="10" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="2" name="PostFrame" translation="0 -1.78 0" static="true" nodeId="46" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="OuterFrame" translation="0 -1.346 0" static="true" nodeId="47" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="4" name="Rafters" translation="-1e-07 2.919 1.27214e-07" rotation="90 -0 0" static="true" nodeId="48" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="5" name="NailPlates" translation="0 2.89176 0" rotation="90 -0 0" static="true" nodeId="49" materialIds="15" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="Roof" translation="0 3.035 1.34134e-07" rotation="90 0 0" static="true" nodeId="50" materialIds="9" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="Trim" translation="0 0.052 0" rotation="90 0 0" static="true" nodeId="51" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="8" name="Skylight" translation="-11 1.055 3.80825e-07" rotation="90 90 -3.81216e-06" static="true" nodeId="52" materialIds="18" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="8" name="Skylight" translation="11 1.055 3.80825e-07" rotation="90 90 -3.81216e-06" static="true" nodeId="53" materialIds="18" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="garagedoor5" translation="0 -1.835 -22.9665" rotation="0 90 0" scale="1 1.1 1" nodeId="54">
+          <Shape shapeId="9" name="door11Trigger" static="true" trigger="true" collisionMask="3145728" clipDistance="500" nodeId="55" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="10" name="tor1a" translation="0 0.0175407 -1.9574" rotation="3.08778e-13 -90 2.51462e-10" scale="1.25 1.1 1" kinematic="true" nodeId="56" materialIds="10" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="10" name="tor1b" translation="0 0.0175407 1.957" rotation="3.08778e-13 -90 2.51462e-10" scale="1.25 1.1 1" kinematic="true" nodeId="57" materialIds="10" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="garagedoor6" translation="0 -1.83504 22.983" rotation="0 90 0" scale="1 1.1 1" nodeId="58">
+          <Shape shapeId="9" name="door11Trigger" static="true" trigger="true" collisionMask="3145728" clipDistance="500" nodeId="59" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="10" name="tor1a" translation="0 0.0175407 -1.9574" rotation="3.08778e-13 -90 2.51462e-10" scale="1.25 1.1 1" kinematic="true" nodeId="60" materialIds="10" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="10" name="tor1b" translation="0 0.0175407 1.957" rotation="3.08778e-13 -90 2.51462e-10" scale="1.25 1.1 1" kinematic="true" nodeId="61" materialIds="10" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="shopLights" translation="0 -4.7 -0.201" visibility="false" clipDistance="200" nodeId="62">
+          <Shape shapeId="11" name="Beleuchtung" nodeId="63" materialIds="5,4" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="11" name="Beleuchtung" visibility="false" nodeId="64" materialIds="5,4" castsShadows="true" receiveShadows="true">
+            <Light name="light" translation="0.437 3.02955 -3.75493" rotation="-90 0 9.77066e-11" clipDistance="100" nodeId="65" type="point" color="1 1 1" emitDiffuse="true" emitSpecular="false" decayRate="4" range="30"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="F1light6" translation="10.887 -2.11664 -22.0935" rotation="-180 0 180" static="true" nodeId="66">
+          <Shape shapeId="12" name="triggerForSwitch01" translation="0.443 -3.84129 -1.683" static="true" trigger="true" collisionMask="3145728" clipDistance="500" nodeId="67" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="13" name="schalter" translation="0.0497685 -0.005706 -1.79421" rotation="-89.9999 -90 90" scale="0.5 0.5 0.5" kinematic="true" nodeId="68" materialIds="16" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="Lampe01" translation="7.257 3.64117 -3.83166" static="true" nodeId="69" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="70">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="71" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="72" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="73" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="74" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="7.25726 3.64117 -10.6808" static="true" nodeId="75" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="76">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="77" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="78" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="79" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="80" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="15.8181 3.64117 -10.681" static="true" nodeId="81" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="82">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="83" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="84" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="85" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="86" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="15.7672 3.64117 -3.83166" static="true" nodeId="87" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="88">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="89" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="90" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="91" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="92" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="17" name="lichtSchalter1" translation="0 0 -1.79586" static="true" nodeId="93" materialIds="11" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="18" name="kabelSchutz" translation="-0.0191697 0.161 0" static="true" nodeId="94" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="19" name="switchcover" translation="0.0459245 -0.006 0.00210614" rotation="-8.1777e-06 -90 6.07338e-06" scale="0.5 0.5 1" static="true" nodeId="95" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="7.25726 3.64117 -17.5311" static="true" nodeId="96" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="97">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="98" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="99" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="100" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="101" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="15.8181 3.64117 -17.531" static="true" nodeId="102" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="103">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="104" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="105" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="106" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="107" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="7.25726 3.64117 -24.4477" static="true" nodeId="108" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="109">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="110" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="111" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="112" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="113" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="15.8181 3.64117 -24.448" static="true" nodeId="114" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="115">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="116" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="117" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="118" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="119" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="7.25726 3.64117 -31.2834" static="true" nodeId="120" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="121">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="122" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="123" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="124" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="125" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="15.8181 3.64117 -31.283" static="true" nodeId="126" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="127">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="128" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="129" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="130" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="131" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="7.25726 3.64117 -38.0974" static="true" nodeId="132" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="133">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="134" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="135" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="136" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="137" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="14" name="Lampe01" translation="15.8181 3.64117 -38.097" static="true" nodeId="138" materialIds="11,11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="139">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="140" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="15" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="141" materialIds="17" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="16" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="142" materialIds="14,12" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="143" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="54">
+      <Attribute name="index" type="scriptCallback" value="F1slideBoth5"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="scriptCallback" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+    <UserAttribute nodeId="56">
+      <Attribute name="isMoving" type="boolean" value="true"/>
+      <Attribute name="time" type="string" value="5"/>
+      <Attribute name="translateX" type="string" value="4.624"/>
+    </UserAttribute>
+    <UserAttribute nodeId="57">
+      <Attribute name="isMoving" type="boolean" value="true"/>
+      <Attribute name="time" type="string" value="5"/>
+      <Attribute name="translateX" type="string" value="4.624"/>
+    </UserAttribute>
+    <UserAttribute nodeId="58">
+      <Attribute name="index" type="scriptCallback" value="F1slideBoth6"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="scriptCallback" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+    <UserAttribute nodeId="60">
+      <Attribute name="isMoving" type="boolean" value="true"/>
+      <Attribute name="time" type="string" value="5"/>
+      <Attribute name="translateX" type="string" value="4.624"/>
+    </UserAttribute>
+    <UserAttribute nodeId="61">
+      <Attribute name="isMoving" type="boolean" value="true"/>
+      <Attribute name="time" type="string" value="5"/>
+      <Attribute name="translateX" type="string" value="4.624"/>
+    </UserAttribute>
+    <UserAttribute nodeId="62">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="66">
+      <Attribute name="index" type="string" value="F1light6"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="string" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

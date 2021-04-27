@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="Eureka Farms" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="8.1.0"/>
+    </Asset>
+    <Files/>
+    <Materials>
+        <Material name="lambert1" materialId="15" diffuseColor="0.494118 0.494118 0.494118 1"/>
+    </Materials>
+    <Shapes externalShapesFile="beets.i3d.shapes"/>
+    <Dynamics/>
+    <Scene>
+        <TransformGroup name="sellingStationGeneric" translation="-936.739 112.474 -940.644" scale="0.907114 1 1.19223" nodeId="30409">
+            <TransformGroup name="gameplay" nodeId="30410">
+                <TransformGroup name="IN" nodeId="30411">
+                    <TransformGroup name="unloadingStation" nodeId="30412">
+                        <TransformGroup name="unloadingTriggers" nodeId="30413">
+                            <Shape shapeId="1" name="exactFillRootNode" translation="0 -0.45 0" static="true" collisionMask="1073741824" nodeId="30414" materialIds="15" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+                            <Shape shapeId="2" name="baleTrigger" translation="0 -0.45 0" static="true" trigger="true" collisionMask="16781312" nodeId="30415" materialIds="15" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                </TransformGroup>
+            </TransformGroup>
+        </TransformGroup>
+    </Scene>
+</i3D>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="17" filename="$data/shaders/lightBeamShader.xml"/>
+    <File fileId="18" filename="$data/shared/mist_diffuse.dds"/>
+    <File fileId="10" filename="textures/Maschinenhalle_2_diffuse.dds"/>
+    <File fileId="8" filename="textures/NailPlates.dds"/>
+    <File fileId="5" filename="textures/SkyLightTinRoof.dds"/>
+    <File fileId="7" filename="textures/TrimWhite.dds"/>
+    <File fileId="2" filename="textures/WhiteTinRoof.dds"/>
+    <File fileId="6" filename="textures/clearPine.dds"/>
+    <File fileId="1" filename="textures/concrete.dds"/>
+    <File fileId="15" filename="textures/grey100.dds"/>
+    <File fileId="16" filename="textures/lichter_difuse1.dds"/>
+    <File fileId="4" filename="textures/redSteel.dds"/>
+    <File fileId="12" filename="textures/stabul_diffuse.png"/>
+    <File fileId="20" filename="textures/switchcoverCF.dds"/>
+    <File fileId="14" filename="textures/white.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="01 - Default" materialId="9">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="01 - Default" materialId="8">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="01 - Default" materialId="6">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="01 - Default" materialId="18" specularColor="0.2 1 1">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="01 - Default" materialId="13" alphaBlending="true">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="01 - Default" materialId="11" specularColor="0.2 1 1">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="01 - Default" materialId="10" specularColor="0.2 1 1">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="acmat_1" materialId="4" specularColor="0.2 1 0.2">
+      <Texture fileId="12"/>
+    </Material>
+    <Material name="LampeEmissive" materialId="14" diffuseColor="0.8 0.8 0.8 1" specularColor="1 1 1">
+    </Material>
+    <Material name="LampeHole" materialId="12">
+      <Texture fileId="16"/>
+    </Material>
+    <Material name="lightBeam_mat" materialId="15" emissiveColor="1 1 1 1" alphaBlending="true" customShaderId="17">
+      <Custommap name="mistNmap" fileId="18"/>
+      <CustomParameter name="UVScaleSpeed" value="1 2 0.005 -0.001"/>
+      <CustomParameter name="colorScale" value="1 1 1 1"/>
+    </Material>
+    <Material name="Maschinenhalle2_mat" materialId="19">
+      <Texture fileId="10"/>
+    </Material>
+    <Material name="Material.002" materialId="7" emissiveColor="0.8 0.8 0.8 1" specularColor="1 1 1">
+    </Material>
+    <Material name="switchcover" materialId="5">
+      <Texture fileId="20"/>
+    </Material>
+    <Material name="triggers_mat" materialId="16" diffuseColor="1 0.266667 0 1">
+    </Material>
+    <Material name="UnnamedMaterial" materialId="17" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="white" materialId="20">
+      <Texture fileId="14"/>
+      <Glossmap fileId="15"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="40x60shedRed.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="40x60MachineShed" nodeId="43">
+      <TransformGroup name="areaDefinitions" nodeId="44">
+        <TransformGroup name="start" translation="-8 0 -11" nodeId="45">
+          <TransformGroup name="width" translation="16 0 0" nodeId="46"/>
+          <TransformGroup name="height" translation="0 0 22" nodeId="47"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="shed" translation="0 -0.28 0" nodeId="48">
+        <Shape shapeId="1" name="Foundation" rotation="90 0 0" static="true" nodeId="49" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="2" name="Roof" translation="0 5.472 0.049" rotation="90 0 0" static="true" nodeId="50" materialIds="10" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="OutsideWalls" translation="0 3.505 0" rotation="0 180 0" static="true" nodeId="51" materialIds="18" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="4" name="SkyLights" translation="4.95995e-09 5.574 0.05" rotation="0 180 0" static="true" nodeId="52" materialIds="13" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="5" name="InsideWalls" translation="0 2.591 0" rotation="0 180 0" static="true" clipDistance="200" nodeId="53" materialIds="9" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="Trim" translation="-0 3.449 0.051" rotation="0 180 0" static="true" nodeId="54" materialIds="11" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="Rafters" translation="-0.012258 5.48594 0" rotation="90 180 0" clipDistance="150" nodeId="55" materialIds="9" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="8" name="NailPlates" translation="-2.66963e-15 5.47351 -2.14854e-07" rotation="90 180 0" clipDistance="150" nodeId="56" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="shopdoor4" translation="-6.147 1.32774 -7.544" rotation="2.0446e-05 90 4.74136e-05" scale="0.8 0.86 1" nodeId="57">
+          <Shape shapeId="9" name="TriggerDoor2" translation="-0.43 2.14415e-08 -0.185" rotation="-180 4.67302e-08 179.54" scale="0.5 1 1.5" static="true" trigger="true" collisionMask="3145728" clipDistance="50" nodeId="58" materialIds="17" nonRenderable="true"/>
+          <Shape shapeId="10" name="doortrigger3" translation="-0.582 -0.873549 0.0569344" kinematic="true" nodeId="59" materialIds="19" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="garagedoor5" translation="0.017 2.41849 -9.24051" rotation="0 -90 7.7152e-05" nodeId="60">
+          <Shape shapeId="11" name="door11Trigger" static="true" trigger="true" collisionMask="3145728" clipDistance="500" nodeId="61" materialIds="16" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="12" name="tor1b" translation="-1.09306e-08 -2.61673e-20 1.58006" rotation="2.89292e-13 -90 1.37163e-10" kinematic="true" nodeId="62" materialIds="18" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="12" name="tor1a" translation="0 4.80369e-20 -1.5804" rotation="3.08778e-13 -90 2.51462e-10" kinematic="true" nodeId="63" materialIds="18" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="garagedoor6" translation="-6.20121 2.42387 -0.00286325" rotation="2.37376e-06 0 8.67763e-05" nodeId="64">
+          <Shape shapeId="11" name="door11Trigger" static="true" trigger="true" collisionMask="3145728" clipDistance="500" nodeId="65" materialIds="16" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="12" name="tor1b" translation="0 -2.61673e-20 1.58006" rotation="2.89292e-13 -90 1.37163e-10" kinematic="true" nodeId="66" materialIds="18" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="12" name="tor1a" translation="0 4.80369e-20 -1.5804" rotation="3.08778e-13 -90 2.51462e-10" kinematic="true" nodeId="67" materialIds="18" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <Shape shapeId="13" name="g1_group" translation="-1.02355 2.01904 8.158" rotation="180 89.5869 180" scale="1.2 1.1 1.3" static="true" clipDistance="500" nodeId="68" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="F1light5" translation="-6.012 1.459 -6.469" rotation="-1.91258e-07 -0 6.6139e-08" static="true" nodeId="69">
+          <Shape shapeId="14" name="triggerForSwitch01" translation="0.443 -3.84129 -1.683" static="true" trigger="true" collisionMask="3145728" clipDistance="500" nodeId="70" materialIds="16" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="15" name="schalter" translation="0.0497685 -0.005706 -1.79421" rotation="-89.9999 -90 90" scale="0.5 0.5 0.5" kinematic="true" nodeId="71" materialIds="20" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="16" name="Lampe01" translation="5.99845 3.05338 2.06648" static="true" nodeId="72" materialIds="12,12" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="73">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="74" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="17" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="75" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="18" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="76" materialIds="7,14" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 0" nodeId="77" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="16" name="Lampe01" translation="6.0208 3.05526 11.8239" static="true" nodeId="78" materialIds="12,12" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="light" nodeId="79">
+              <Light name="pointLight" rotation="-90 -0 0" nodeId="80" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="10">
+                <Shape shapeId="17" name="lightBeam20" translation="0 0 -0.0325803" scale="0.8 0.8 0.4" clipDistance="100" nodeId="81" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              </Light>
+              <Shape shapeId="18" name="LampeEmissive" translation="0 -0.0109878 0" kinematic="true" nodeId="82" materialIds="7,14" castsShadows="true" receiveShadows="true"/>
+              <Light name="pointLight" translation="0.005 -0.221869 -0.003" rotation="90 -0 1.01778e-13" nodeId="83" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="0.5"/>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="19" name="lichtSchalter1" translation="0 0 -1.79586" static="true" nodeId="84" materialIds="12" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="20" name="kabelSchutz" translation="-0.0191697 0.161 0" scale="1 0.82 1" static="true" nodeId="85" materialIds="12" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="21" name="switchcover" translation="0.0459245 -0.00571898 0.00210614" rotation="-8.1777e-06 -90 6.07338e-06" scale="0.5 0.5 1" static="true" nodeId="86" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="57">
+      <Attribute name="index" type="string" value="F1shopDoor2"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="string" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+    <UserAttribute nodeId="60">
+      <Attribute name="index" type="scriptCallback" value="F1slideBoth1"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="scriptCallback" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+    <UserAttribute nodeId="62">
+      <Attribute name="isMoving" type="boolean" value="true"/>
+      <Attribute name="time" type="string" value="5"/>
+      <Attribute name="translateX" type="string" value="-4.623"/>
+    </UserAttribute>
+    <UserAttribute nodeId="63">
+      <Attribute name="isMoving" type="boolean" value="true"/>
+      <Attribute name="time" type="string" value="5"/>
+      <Attribute name="translateX" type="string" value="-4.623"/>
+    </UserAttribute>
+    <UserAttribute nodeId="64">
+      <Attribute name="index" type="scriptCallback" value="F1slideBoth2"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="scriptCallback" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+    <UserAttribute nodeId="66">
+      <Attribute name="isMoving" type="boolean" value="true"/>
+      <Attribute name="time" type="string" value="5"/>
+      <Attribute name="translateX" type="string" value="-4.623"/>
+    </UserAttribute>
+    <UserAttribute nodeId="67">
+      <Attribute name="isMoving" type="boolean" value="true"/>
+      <Attribute name="time" type="string" value="5"/>
+      <Attribute name="translateX" type="string" value="-4.623"/>
+    </UserAttribute>
+    <UserAttribute nodeId="69">
+      <Attribute name="index" type="string" value="F1light5"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="string" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>
